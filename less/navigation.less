@@ -2,23 +2,7 @@
 @import "mixins.less";
 @import "variables.less";
 
-@keyframes fun-bus {
-    0% {
-        color: red;
-    }
 
-    25% {
-        color: yellow;
-    }
-
-    50% {
-        color: blue;
-    }
-
-    100% {
-        color: green;
-    }
-}
 
 .nav-section {
     .custom-flex(space-between, center);
@@ -43,9 +27,8 @@
         }
 
         &:hover {
-            animation-name: fun-bus;
-            animation-duration: 2s;
             font-size: 6rem;
+            .color-cycle-animation();
         }
     }
 

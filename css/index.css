@@ -168,20 +168,6 @@ img {
   width: 100%;
   margin: 0 auto;
 }
-@keyframes fun-bus {
-  0% {
-    color: red;
-  }
-  25% {
-    color: yellow;
-  }
-  50% {
-    color: blue;
-  }
-  100% {
-    color: green;
-  }
-}
 .nav-section {
   display: flex;
   justify-content: space-between;
@@ -208,9 +194,23 @@ img {
   }
 }
 .nav-section h1:hover {
+  font-size: 6rem;
   animation-name: fun-bus;
   animation-duration: 2s;
-  font-size: 6rem;
+}
+@keyframes fun-bus {
+  0% {
+    color: red;
+  }
+  25% {
+    color: yellow;
+  }
+  50% {
+    color: blue;
+  }
+  100% {
+    color: green;
+  }
 }
 .nav-section nav {
   display: flex;

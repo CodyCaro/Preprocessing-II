@@ -7,15 +7,15 @@
     align-items: @align;
 }
 
-.top-dash-border(@dash-size){
+.top-dash-border(@dash-size) {
     border-top: @dash-size dashed @silver;
 }
 
-.bottom-dash-border(@dash-size){
+.bottom-dash-border(@dash-size) {
     border-bottom: @dash-size dashed @silver;
 }
 
-.custom-button(@color, @width: 83%, @text-color: white, @padding: 15px){
+.custom-button(@color, @width: 83%, @text-color: white, @padding: 15px) {
     background-color: @color;
     text-align: center;
     color: white;
@@ -26,7 +26,30 @@
 
     transition: background-color .5s;
 
-    &:hover{
+    &:hover {
         background-color: darken(@color, 15%);
     }
+}
+
+.color-cycle-animation(@duration: 2s, @color-one:red, @color-two:yellow, @color-three:blue, @color-four:green) {
+    @keyframes fun-bus {
+        0% {
+            color: @color-one;
+        }
+
+        25% {
+            color: @color-two;
+        }
+
+        50% {
+            color: @color-three;
+        }
+
+        100% {
+            color: @color-four;
+        }
+    }
+
+    animation-name: fun-bus;
+    animation-duration: @duration;
 }
