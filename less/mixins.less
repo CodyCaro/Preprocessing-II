@@ -1,4 +1,5 @@
 // Mixins in here
+@import "variables.less";
 
 .custom-flex(@justify, @align) {
     display: flex;
@@ -7,9 +8,25 @@
 }
 
 .top-dash-border(@dash-size){
-    border-top: @dash-size dashed lightgrey;
+    border-top: @dash-size dashed @silver;
 }
 
 .bottom-dash-border(@dash-size){
-    border-bottom: @dash-size dashed lightgrey;
+    border-bottom: @dash-size dashed @silver;
+}
+
+.custom-button(@color, @text-color: white, @padding: 15px, @width: 83%){
+    background-color: @color;
+    text-align: center;
+    color: white;
+    font-size: 1.75rem;
+    padding: @padding;
+    width: @width;
+    border-radius: 12px;
+
+    transition: background-color .5s;
+
+    &:hover{
+        background-color: darken(@color, 15%);
+    }
 }
