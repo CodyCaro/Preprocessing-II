@@ -1,12 +1,24 @@
 // Navigation Styles here
 @import "mixins.less";
+@import "variables.less";
 
 @keyframes fun-bus {
-    0%   {color: red;}
-    25%  {color: yellow;}
-    50%  {color: blue;}
-    100% {color: green;}
-  }
+    0% {
+        color: red;
+    }
+
+    25% {
+        color: yellow;
+    }
+
+    50% {
+        color: blue;
+    }
+
+    100% {
+        color: green;
+    }
+}
 
 .nav-section {
     .custom-flex(space-between, center);
@@ -14,11 +26,23 @@
     margin-bottom: 22px;
     width: 100%;
 
-    h1{
+
+    @media @mobile {
+        flex-direction: column;
+        margin-top: 17px;
+        margin-bottom: 5px;
+    }
+
+    h1 {
         width: 56%;
         transition: font-size .2s;
 
-        &:hover{
+        @media @mobile {
+            text-align: center;
+            font-size: 3rem;
+        }
+
+        &:hover {
             animation-name: fun-bus;
             animation-duration: 2s;
             font-size: 6rem;
@@ -31,12 +55,17 @@
         width: 36%;
         margin: 0 auto 0 auto;
 
+        @media @mobile {
+            margin-top: 17px;
+            width: 75%;
+        }
+
         a {
             text-decoration: none;
             font-size: 1.5rem;
             color: black;
 
-            &:hover{
+            &:hover {
                 color: lighten(black, 55%)
             }
         }
