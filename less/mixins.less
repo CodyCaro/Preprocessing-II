@@ -1,1 +1,15 @@
 // Mixins in here
+
+.custom-flex(@justify, @align) {
+    display: flex;
+    justify-content: @justify;
+    align-items: @align;
+}
+
+.top-dash-border(@dash-size){
+    border-top: @dash-size dashed lightgrey;
+}
+
+.bottom-dash-border(@dash-size){
+    border-bottom: @dash-size dashed lightgrey;
+}

@@ -1,1 +1,28 @@
 // Navigation Styles here
+@import "mixins.less";
+
+.nav-section {
+    .custom-flex(space-between, center);
+    margin-top: 22px;
+    margin-bottom: 22px;
+    width: 100%;
+
+    h1{
+        width: 56%;
+    }
+
+    nav {
+
+        .custom-flex(space-between, center);
+        width: 36%;
+        margin: 0 auto 0 auto;
+        
+
+        a {
+            text-decoration: none;
+            font-size: 1.5rem;
+            color: black;
+        }
+    }
+
+}
