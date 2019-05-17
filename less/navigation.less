@@ -1,6 +1,13 @@
 // Navigation Styles here
 @import "mixins.less";
 
+@keyframes fun-bus {
+    0%   {color: red;}
+    25%  {color: yellow;}
+    50%  {color: blue;}
+    100% {color: green;}
+  }
+
 .nav-section {
     .custom-flex(space-between, center);
     margin-top: 22px;
@@ -9,6 +16,13 @@
 
     h1{
         width: 56%;
+        transition: font-size .2s;
+
+        &:hover{
+            animation-name: fun-bus;
+            animation-duration: 2s;
+            font-size: 6rem;
+        }
     }
 
     nav {
@@ -16,12 +30,15 @@
         .custom-flex(space-between, center);
         width: 36%;
         margin: 0 auto 0 auto;
-        
 
         a {
             text-decoration: none;
             font-size: 1.5rem;
             color: black;
+
+            &:hover{
+                color: lighten(black, 55%)
+            }
         }
     }
 

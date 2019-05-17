@@ -168,6 +168,20 @@ img {
   width: 100%;
   margin: 0 auto;
 }
+@keyframes fun-bus {
+  0% {
+    color: red;
+  }
+  25% {
+    color: yellow;
+  }
+  50% {
+    color: blue;
+  }
+  100% {
+    color: green;
+  }
+}
 .nav-section {
   display: flex;
   justify-content: space-between;
@@ -178,6 +192,12 @@ img {
 }
 .nav-section h1 {
   width: 56%;
+  transition: font-size 0.2s;
+}
+.nav-section h1:hover {
+  animation-name: fun-bus;
+  animation-duration: 2s;
+  font-size: 6rem;
 }
 .nav-section nav {
   display: flex;
@@ -190,6 +210,9 @@ img {
   text-decoration: none;
   font-size: 1.5rem;
   color: black;
+}
+.nav-section nav a:hover {
+  color: #8c8c8c;
 }
 .header-section {
   display: flex;
