@@ -1,4 +1,39 @@
+@import "mixins.less";
+
 .home {
+
+  .header-section {
+    .custom-flex(space-between, center);
+    flex-direction: column;
+    .top-dash-border(3px);
+    padding-bottom: 13px;
+
+    @media @mobile {
+      flex-direction: column;
+      margin-top: 0px;
+      margin-bottom: 22px;
+    }
+
+    img {
+      @media @mobile {
+        margin: 0 24px;
+        width: 90%;
+      }
+
+    }
+
+    .text-content {
+      margin-top: 15px;
+      width: 100%;
+      .bottom-dash-border(2px);
+
+      @media @mobile {
+        margin: 17px 25px 0 25px;
+        padding-bottom: 0px;
+        width: 90%;
+      }
+    }
+  }
 
   .content-section {
     margin: 30px 0;
@@ -6,19 +41,38 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
-    
+    @media @mobile {
+      flex-direction: column;
+      margin: 0px auto 0px auto;
+      width: 90%;
+    }
+
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile {
+        width: 100%;
+        padding-right: 0px;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
 
+      @media @mobile {
+        width: 100%;
+        padding-left: 0px;
+      }
+
       img {
         border-radius: 10px;
+
+        @media @mobile {
+          width: 100%;
+          padding-left: 0px;
+        }
       }
     }
   }
@@ -30,17 +84,33 @@
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+
+      @media @mobile {
+        padding-left: 0px;
+        margin-top: 25px;
+      }
     }
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+
+      @media @mobile {
+        padding-right: 0px;
+        order: 1;
+      }
     }
   }
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+
+    @media @mobile {
+      flex-direction: column;
+      margin: 20px auto 20px auto;
+      width: 90%;
+    }
 
     img {
       border-radius: 10px;
@@ -53,9 +123,29 @@
     display: flex;
     justify-content: space-between;
 
+    @media @mobile {
+      flex-direction: column;
+      margin: 20px auto 20px auto;
+      width: 90%;
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      
+      @media @mobile {
+        flex-direction: column;
+        margin: 0 auto 18px auto;
+        width: 90%;
+      }
+
+      .btn {
+        .custom-button(@button-bg, 100%);
+      }
+
     }
+
   }
-}// home
+}
+
+// home
